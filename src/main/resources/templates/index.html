@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal de gestión comercial | Inicio</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<!-- Reutilizamos el mismo navbar en todas las vistas, como en la clase Thymeleaf. -->
+<div th:replace="~{fragments/navbar :: navbar('inicio')}"></div>
+<main class="container">
+    <section class="hero">
+        <span class="eyebrow">Portal de gestión comercial</span>
+        <h1>Bienvenidos a los productos</h1>
+        <p>add structure and navigation to the customer flow</p>
+        <div class="actions">
+            <a class="button" th:href="@{/clientes}">Ver clientes</a>
+        </div>
+    </section>
+    <div class="grid-2">
+        <article class="panel"><h2>Cliente</h2><p>Registra a los clientes.</p></article>
+        <article class="panel"><h2>Catalogo</h2><p>Podemos visualizar lo que hay en el catalogo.</p></article>
+        <article class="panel"><h2>Pedido</h2><p>Los clientes pueden pedir lo que haya en el catalogo.</p></article>
+
+    </div>
+</main>
+</body>
+</html>
